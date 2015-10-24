@@ -29,11 +29,11 @@ ul {
   padding:0;
 }
 
-.navbar-nav li a:hover, 
+.navbar-nav li a:hover,
 .navbar-nav li a:focus {
   outline:none;
   outline-offset: 0;
-  text-decoration:none;  
+  text-decoration:none;
   background: transparent;
 }
 
@@ -46,11 +46,11 @@ a {
   transition: 300ms;
 }
 
-a:focus, 
+a:focus,
 a:hover {
   text-decoration: none;
   outline: none;
-  color: #ffe401;
+  color: rgb(255,192,0);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -64,8 +64,8 @@ span {
 section {
 	overflow:hidden;
 }
-.default-bg {	
-	background-color:#ffe401;
+.default-bg {
+	background-color:rgb(255,192,0);
 }
 
 .entry-header {
@@ -115,14 +115,14 @@ textarea {
 	text-transform:uppercase;
 	position:relative;
 	padding:25px 28px;
-	font-family: 'Advent Pro', sans-serif;	
+	font-family: 'Advent Pro', sans-serif;
 }
 
-#navigation .navbar-right li a.active, 
-#navigation .navbar-right li a:hover, 
-#navigation .navbar-right li a:focus, 
+#navigation .navbar-right li a.active,
+#navigation .navbar-right li a:hover,
+#navigation .navbar-right li a:focus,
 #navigation .navbar-right li.active a  {
-	color:#fff;	
+	color:#fff;
 }
 
 .navbar-right li.active:before {
@@ -164,7 +164,7 @@ textarea {
 #main-carousel h2 {
 	font-size:102px;
 	font-weight:700;
-	color:#ffe401;
+	color:rgb(255,192,0);
 }
 
 #main-carousel h2 span {
@@ -187,7 +187,7 @@ textarea {
 }
 
 .carousel-caption i {
-	background-color: #FFE401;
+	background-color: rgb(255,192,0);
 	border-radius: 50%;
 	color: #242525;
 	font-size: 48px;
@@ -198,7 +198,7 @@ textarea {
 	overflow: hidden;
 	padding: 1px 0 0 9px;
 	text-align: center;
-	width: 62px;	
+	width: 62px;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
@@ -217,7 +217,7 @@ textarea {
 }
 
 #main-carousel .carousel-indicators .active {
-	background-color:#ffe401;
+	background-color:rgb(255,192,0);
 }
 
 
@@ -264,7 +264,7 @@ textarea {
 }
 
 .service-icon i{
-	color: #FFE401;
+	color: rgb(255,192,0);
 	font-size: 60px;
 	margin-right: 40px !important;
 }
@@ -283,10 +283,10 @@ textarea {
 
 .single-service:hover .single-service-icon {
 	background-color:#333333;
-	color: #FFE401;
+	color: rgb(255,192,0);
 }
 
-.single-service-icon, 
+.single-service-icon,
 .single-service:hover .single-service-icon{
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
@@ -301,13 +301,13 @@ textarea {
 }
 
 .single-service-icon {
-	background-color: #FFE401;
+	background-color: rgb(255,192,0);
 	color: #333333;
 	font-size: 72px;
 	padding: 7px 0;
 	text-align: center;
-	margin-top:7px;	
-	
+	margin-top:7px;
+
 }
 
 .single-service-text {
@@ -318,11 +318,11 @@ textarea {
 .single-service-text h2 {
 	font-size:36px;
 	font-weight:100;
-	margin-top:0;	
+	margin-top:0;
 }
 
 .single-service-text h2 span {
-	font-weight:300;	
+	font-weight:300;
 }
 
 
@@ -353,7 +353,7 @@ textarea {
 	width:100%;
 }
 
-.about-content {	
+.about-content {
 	padding: 17px 50px 62px;
 	font-weight:300;
 	height:100%;
@@ -397,7 +397,7 @@ textarea {
 .single-member {
 	font-size: 24px;
 	font-weight: 300;
-	text-transform: uppercase;	
+	text-transform: uppercase;
 }
 
 .single-member h3 {
@@ -413,7 +413,7 @@ textarea {
 	left:0;
 	opacity: 0;
 	position: absolute;
-	right:0;	
+	right:0;
 }
 
 .overlay  ul li{
@@ -421,7 +421,7 @@ textarea {
 	width:33.33%
 }
 
-.overlay  ul li a {	
+.overlay  ul li a {
 	color: #FFFFFF;
 	display: block;
 	font-size: 24px;
@@ -431,7 +431,7 @@ textarea {
 }
 
 .overlay  ul li a.facebook {
-	background-color: #ffe401;
+	background-color: rgb(255,192,0);
 }
 
 .overlay  ul li a.twitter {
@@ -459,7 +459,7 @@ textarea {
 #testimonials .entry-header {
   padding-bottom: 15px;
   padding-top: 75px;
-} 
+}
 
 .testimony-person {
 	display:block;
@@ -470,7 +470,7 @@ textarea {
 	display:inline-block
 }
 
-.testimony-caption {	
+.testimony-caption {
 	padding:58px 0 88px;
 	font-size:18px;
 	font-weight:300;
@@ -535,7 +535,7 @@ textarea {
 }
 
 #portfolio .entry-header h2{
-	color:#ffe401;
+	color:rgb(255,192,0);
 }
 
 #portfolio-slider .item {
@@ -544,7 +544,7 @@ textarea {
 }
 
 #portfolio-slider .col-sm-6 {
-	height:100%;	
+	height:100%;
 }
 
 .portfolio-image img {
@@ -563,7 +563,7 @@ textarea {
 
 .recent-port-text {
 	padding:40px 50px;
-	
+
 }
 
 .recent-port-text h2 {
@@ -590,7 +590,7 @@ textarea {
 }
 
 #portfolio-slider .carousel-indicators .active {
-	background-color:#ffe401
+	background-color:rgb(255,192,0)
 }
 
 .portfolio-filter {
@@ -604,7 +604,7 @@ textarea {
 }
 
 .portfolio-filter li a {
-	color:#b0b0b0;	
+	color:#b0b0b0;
 	font-size: 24px;
 	position:relative;
 	padding:11px;
@@ -630,11 +630,11 @@ textarea {
 	left:0;
 }
 
-.portfolio-filter li a:hover, 
-.portfolio-filter li a:active, 
-.portfolio-filter li a:focus, 
+.portfolio-filter li a:hover,
+.portfolio-filter li a:active,
+.portfolio-filter li a:focus,
 .portfolio-filter li a.active {
-	color:#ffe401;
+	color:rgb(255,192,0);
 }
 
 
@@ -645,19 +645,19 @@ margin-bottom:30px;
 }
 
 .mask {
-	background-color: #000000;	
+	background-color: #000000;
 	left:0;
 	top:0;
 	bottom:-100%;
-	position: absolute;	
+	position: absolute;
 	width: 100%;
 	opacity:0;
 }
 
 .mask a {
-	border: 10px solid #FFE401;
+	border: 10px solid rgb(255,192,0);
 	border-radius: 50%;
-	color: #FFE401;
+	color: rgb(255,192,0);
 	font-size: 30px;
 	height: 72px;
 	left:-50%;
@@ -668,7 +668,7 @@ margin-bottom:30px;
 	text-align: center;
 	top:-50%;
 	width: 72px;
-	z-index: 10;	
+	z-index: 10;
 }
 
 .mask a:hover {
@@ -677,7 +677,7 @@ margin-bottom:30px;
 }
 
 .mask a:before {
-	position: absolute;	
+	position: absolute;
 	content: "";
 	background-color: #020202;
 	height: 14px;
@@ -693,7 +693,7 @@ margin-bottom:30px;
 
 .view:hover .mask {
 	bottom:0;
-	opacity: 0.8;	
+	opacity: 0.8;
 }
 
 .mask, .view:hover .mask {
@@ -738,17 +738,17 @@ margin-bottom:30px;
 	opacity:1;
 }
 
-.client-left, 
-.client-right {	
+.client-left,
+.client-right {
 	color: #ABABAB;
 	font-size: 60px;
 	position: absolute;
 	top: -13%;
 }
 
-.client-left:hover, 
+.client-left:hover,
 .client-right:hover {
-	color: #FFE401;
+	color: rgb(255,192,0);
 }
 
 .client-left {
@@ -815,7 +815,7 @@ margin-bottom:30px;
 
 .btn.btn-primary {
 	background-color: #1E1E1E;
-	color: #FFE401;
+	color: rgb(255,192,0);
 	display: inline-block;
 	font-size: 20px;
 	font-weight: 300;
@@ -834,7 +834,7 @@ margin-bottom:30px;
 }
 
 #blog .entry-header h2 {
-	color:#ffe401;
+	color:rgb(255,192,0);
 	font-weight:300;
 }
 
@@ -844,7 +844,7 @@ margin-bottom:30px;
 }
 
 .post-date {
-	background-color: #FFE401;
+	background-color: rgb(255,192,0);
 	color: #1E1E1E;
 	font-size: 48px;
 	font-weight: 400;
@@ -853,7 +853,7 @@ margin-bottom:30px;
 	position: absolute;
 	right: -18px;
 	text-align: center;
-	top: 15px;	
+	top: 15px;
 }
 
 .post-date span {
@@ -872,11 +872,11 @@ margin-bottom:30px;
 
 .contact-section {
 	background-color:#1e1e1e;
-	padding:40px 0;	
+	padding:40px 0;
 }
 
 .contact-section h2 {
-	color:#FFE401;
+	color:rgb(255,192,0);
 	text-transform:uppercase;
 	margin-bottom:30px;
 }
@@ -887,14 +887,14 @@ margin-bottom:30px;
 	font-size:18px;
 	min-height:50px;
 	color:#9f9f9f;
-	
+
 }
 
 .float-left {
 	float:left;
 	width:32%;
 	margin-right:2%;
-	margin-bottom:16px;	
+	margin-bottom:16px;
 }
 
 .float-left.subject-field {
@@ -907,12 +907,12 @@ textarea.form-control {
 }
 
 .form-control:focus {
-	border:1px solid #ffe401;
+	border:1px solid rgb(255,192,0);
 	box-shadow:none;
 }
 
 .btn-submit {
-	background-color: #FFE401;
+	background-color: rgb(255,192,0);
 	border: medium none;
 	color: #151515;
 	font-size: 18px;
@@ -937,16 +937,16 @@ textarea.form-control {
 }
 
 .contact-details ul li i {
-	float:left; 
+	float:left;
 	color:#555;
 	margin-top:5px;
 }
 
-.bottom {	
+.bottom {
 	color:#010101;
-	padding-top:40px;	
-	padding-bottom:40px;	
-	font-size:18px;	
+	padding-top:16px;
+	padding-bottom:4px;
+	font-size:17px;
 }
 
 .bottom a {
@@ -1009,7 +1009,7 @@ textarea.form-control {
 }
 
 #single-folio .single-folio-slide {
-	max-height: 600px;	
+	max-height: 600px;
 	color:#000;
 	background-color:#fff;
 	margin-top:65px;
@@ -1024,13 +1024,13 @@ textarea.form-control {
 	top: 20px;
 }
 
-.portfolio-prev {	
+.portfolio-prev {
 	left:75px;
-} 
+}
 
 .portfolio-next {
 	left:105px;
-	
+
 }
 
 .close-item {
@@ -1079,7 +1079,7 @@ textarea.form-control {
 
 .blog-item .fa-clock-o {
 	background-color: #1e1e1e;
-	color: #ffe401;
+	color: rgb(255,192,0);
 	font-size: 44px;
 	padding:20px 22px;
 }
@@ -1139,7 +1139,7 @@ textarea.form-control {
 
 .social-share ul li{
 	float:left;
-	
+
 }
 
 .author-details h2 {
@@ -1171,13 +1171,13 @@ textarea.form-control {
 	color:#DF2B36;
 }
 
-.comments-area img, 
+.comments-area img,
 .author-details img {
 	background:#f4f3f3;
 	height: 75px;
 	margin-right: 25px;
 	padding: 2px;
-	width: 75px;	
+	width: 75px;
 }
 
 .parent.media-list {
@@ -1191,7 +1191,7 @@ textarea.form-control {
 	margin-bottom: 25px;
 }
 
-.media-body h3, 
+.media-body h3,
 .media-body h4  {
   color: #000;
   font-weight: 300;
@@ -1200,7 +1200,7 @@ textarea.form-control {
 
 .media-body h3 {
 	font-size:30px;
-	
+
 }
 
 .btn-reply {
@@ -1232,12 +1232,12 @@ textarea.form-control {
 }
 
 .replay-box  .form-control:focus {
-	border-color:#ffe401;
+	border-color:rgb(255,192,0);
 }
 
 .replay-box .btn-submit {
   background-color: transparent;
-  border: 1px solid #ffe401;
+  border: 1px solid rgb(255,192,0);
   margin-top: 35px;
   padding: 10px 40px;
 }
@@ -1274,4 +1274,10 @@ textarea.form-control {
   display: table-cell;
   vertical-align: middle;
   margin: 0 auto;
+}
+.navbar-brand {
+	padding: 0 !important
+}
+.navbar-brand img {
+	margin-top: 15px
 }
