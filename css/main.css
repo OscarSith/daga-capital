@@ -190,15 +190,15 @@ textarea {
 	background-color: rgb(255,192,0);
 	border-radius: 50%;
 	color: #242525;
-	font-size: 48px;
+	font-size: 20px;
 	font-weight: 400;
-	height: 62px;
-	line-height: 64px;
+	height: 40px;
+	line-height: 42px;
 	margin-left: 48px;
 	overflow: hidden;
-	padding: 1px 0 0 9px;
+	padding: 1px 0 0 4px;
 	text-align: center;
-	width: 62px;
+	width: 40px;
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
 	-ms-transition: all 0.2s ease-in-out;
@@ -233,7 +233,7 @@ textarea {
 }
 
 .service-heading  {
-	padding:110px 0 50px;
+	padding:0px 0 50px;
 }
 
 .service-heading .col-sm-3 {
@@ -880,7 +880,9 @@ margin-bottom:30px;
 	text-transform:uppercase;
 	margin-bottom:30px;
 }
-
+.contact-section h3 {
+	color: #fff
+}
 .form-control {
 	background-color:#fff;
 	border:1px solid #454545;
