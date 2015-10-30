@@ -31,11 +31,11 @@ jQuery(function($) {'use strict',
 				.eq(i).addClass('active');
 			}
 		})
-
 	};
-        $(document).ready(function () {
+
+    $(document).ready(function () {
 		$(".navbar-nav li a").click(function(event) {
-		$(".navbar-collapse").collapse('hide');
+			$(".navbar-collapse").collapse('hide');
 		});
 	});
 
@@ -48,171 +48,129 @@ jQuery(function($) {'use strict',
 	});
 
 	// portfolio filter
-	$(window).load(function(){'use strict',
-		$portfolio_selectors = $('.portfolio-filter >li>a');
-		if($portfolio_selectors!='undefined'){
-			$portfolio = $('.portfolio-items');
-			$portfolio.isotope({
-				itemSelector : '.portfolio-item',
-				layoutMode : 'fitRows'
-			});
+	// $(window).load(function(){'use strict',
+	// 	$portfolio_selectors = $('.portfolio-filter >li>a');
+	// 	if($portfolio_selectors!='undefined'){
+	// 		$portfolio = $('.portfolio-items');
+	// 		$portfolio.isotope({
+	// 			itemSelector : '.portfolio-item',
+	// 			layoutMode : 'fitRows'
+	// 		});
 
-			$portfolio_selectors.on('click', function(){
-				$portfolio_selectors.removeClass('active');
-				$(this).addClass('active');
-				var selector = $(this).attr('data-filter');
-				$portfolio.isotope({ filter: selector });
-				return false;
-			});
-		}
-	});
+	// 		$portfolio_selectors.on('click', function(){
+	// 			$portfolio_selectors.removeClass('active');
+	// 			$(this).addClass('active');
+	// 			var selector = $(this).attr('data-filter');
+	// 			$portfolio.isotope({ filter: selector });
+	// 			return false;
+	// 		});
+	// 	}
+	// });
 
 	// Single Portfolio
-	$('#folio-items').on('click','.mask a',function(event){
-		event.preventDefault();
+	var $folioItems = $('#folio-items');
+	if ($folioItems.length) {
+		$folioItems.on('click','.mask a',function(event){
+			event.preventDefault();
 
-		var link = $(this).data('single_url');
-		var full_url = '#portfolio-details',
-			parts = full_url.split("#"),
-			trgt = parts[1],
-			target_top = $("#"+trgt).offset().top;
+			var link = $(this).data('single_url');
+			var full_url = '#portfolio-details',
+				parts = full_url.split("#"),
+				trgt = parts[1],
+				target_top = $("#"+trgt).offset().top;
 
-		$('html, body').animate({scrollTop:target_top}, 1200);
-		$('#single-portfolio').slideUp(1000, function(){
-			$(this).load(link,function(){
-				$(this).slideDown(1000);
+			$('html, body').animate({scrollTop:target_top}, 1200);
+			$('#single-portfolio').slideUp(1000, function(){
+				$(this).load(link,function(){
+					$(this).slideDown(1000);
+				});
 			});
 		});
-	});
+	}
 
 	// Close Single Portfolio
-	$('#portfolio-details').on('click','.close-item',function(){
-		var full_url = '#folio-items',
-			parts = full_url.split("#"),
-			trgt = parts[1],
-			target_offset = $("#"+trgt).offset(),
-			target_top = target_offset.top;
+	var $portfolioDetails = $('#portfolio-details');
+	if ($portfolioDetails.length) {
+		$('#portfolio-details').on('click','.close-item',function(){
+			var full_url = '#folio-items',
+				parts = full_url.split("#"),
+				trgt = parts[1],
+				target_offset = $("#"+trgt).offset(),
+				target_top = target_offset.top;
 
-		$('html, body').animate({scrollTop:target_top}, 1400);
+			$('html, body').animate({scrollTop:target_top}, 1400);
 
-		$("#single-portfolio").slideUp(1000);
-	});
+			$("#single-portfolio").slideUp(1000);
+		});
+	}
 
 	//Initiat WOW JS
 	new WOW().init();
-
-	// Google Map Customization
-	(function(){
-
-		var map;
-
-		map = new GMaps({
-			el: '#gmap',
-			lat: 43.04446,
-			lng: -76.130791,
-			scrollwheel:false,
-			zoom: 14,
-			zoomControl : false,
-			panControl : false,
-			streetViewControl : false,
-			mapTypeControl: false,
-			overviewMapControl: false,
-			clickable: false
-		});
-
-		var image = '';
-		map.addMarker({
-			lat: 43.04446,
-			lng: -76.130791,
-			icon: image,
-			animation: google.maps.Animation.DROP,
-			verticalAlign: 'bottom',
-			horizontalAlign: 'center',
-			backgroundColor: '#3e8bff',
-		});
-
-		var styles = [
-			{
-				"featureType": "road",
-				"stylers": [
-				{ "color": "#c5c5c5" }
-				]
-			},{
-				"featureType": "water",
-				"stylers": [
-				{ "color": "#c1c1c1" }
-				]
-			},{
-				"featureType": "landscape",
-				"stylers": [
-				{ "color": "#e5e3df" }
-				]
-			},{
-				"elementType": "labels.text.fill",
-				"stylers": [
-				{ "color": "#000000" }
-				]
-			},{
-				"featureType": "poi",
-				"stylers": [
-				{ "color": "#e5e3df" }
-				]
-			},{
-				"elementType": "labels.text",
-				"stylers": [
-				{ "saturation": 1 },
-				{ "weight": 0.1 },
-				{ "color": "#000000" }
-				]
-			}
-		];
-
-		map.addStyle({
-			styledMapName:"Styled Map",
-			styles: styles,
-			mapTypeId: "map_style"
-		});
-
-		map.setStyle("map_style");
-	}());
 });
 
+// Preloader function
+var cSpeed=7;
+var cWidth=75;
+var cHeight=75;
+var cTotalFrames=8;
+var cFrameWidth=75;
+var cImageSrc='images/sprites.gif';
 
-	// Preloader function
-	var cSpeed=7;
-	var cWidth=75;
-	var cHeight=75;
-	var cTotalFrames=8;
-	var cFrameWidth=75;
-	var cImageSrc='images/sprites.gif';
+var cImageTimeout=false;
 
-	var cImageTimeout=false;
+function startAnimation(){
 
-	function startAnimation(){
+	document.getElementById('loaderImage').innerHTML='<canvas id="canvas" width="'+cWidth+'" height="'+cHeight+'"><p>Your browser does not support the canvas element.</p></canvas>';
 
-		document.getElementById('loaderImage').innerHTML='<canvas id="canvas" width="'+cWidth+'" height="'+cHeight+'"><p>Your browser does not support the canvas element.</p></canvas>';
+	//FPS = Math.round(100/(maxSpeed+2-speed));
+	FPS = Math.round(100/cSpeed);
+	SECONDS_BETWEEN_FRAMES = 1 / FPS;
+	g_GameObjectManager = null;
+	g_run=genImage;
 
-		//FPS = Math.round(100/(maxSpeed+2-speed));
-		FPS = Math.round(100/cSpeed);
-		SECONDS_BETWEEN_FRAMES = 1 / FPS;
-		g_GameObjectManager = null;
-		g_run=genImage;
+	g_run.width=cTotalFrames*cFrameWidth;
+	genImage.onload=function (){cImageTimeout=setTimeout(fun, 0)};
+	initCanvas();
+}
 
-		g_run.width=cTotalFrames*cFrameWidth;
-		genImage.onload=function (){cImageTimeout=setTimeout(fun, 0)};
-		initCanvas();
-	}
+function imageLoader(s, fun)//Pre-loads the sprites image
+{
+	clearTimeout(cImageTimeout);
+	cImageTimeout=0;
+	genImage = new Image();
+	genImage.onload=function (){cImageTimeout=setTimeout(fun, 0)};
+	genImage.onerror=new Function('alert(\'Could not load the image\')');
+	genImage.src=s;
+}
 
+//The following code starts the animation
+new imageLoader(cImageSrc, 'startAnimation()');
 
-	function imageLoader(s, fun)//Pre-loads the sprites image
-	{
-		clearTimeout(cImageTimeout);
-		cImageTimeout=0;
-		genImage = new Image();
-		genImage.onload=function (){cImageTimeout=setTimeout(fun, 0)};
-		genImage.onerror=new Function('alert(\'Could not load the image\')');
-		genImage.src=s;
-	}
+$('#main-contact-form').on('submit', function(e) {
+	e.preventDefault();
+	var $this = $(this),
+		data = $this.serialize(),
+		$inputs = $this.find(':input');
 
-	//The following code starts the animation
-	new imageLoader(cImageSrc, 'startAnimation()');
+	$inputs.prop('disabled', true);
+	$inputs.last().text('Enviando...');
+	$.ajax({
+		url: $this.attr('action'),
+		data: data,
+		type: 'post',
+		dataType: 'json'
+	}).done(function(rec) {
+		if (rec.load) {
+			$('#modal-alert').find('div.modal-body p').html(rec.success_message);
+			$this.trigger('reset');
+		} else {
+			alert(rec.error_message);
+		}
+	}).always(function() {
+		$inputs.prop('disabled', false);
+		$inputs.last().text('Enviar');
+	}).fail(function() {
+		$inputs.prop('disabled', false);
+		$inputs.last().text('Enviar');
+	});
+});

@@ -1,6 +1,12 @@
-/* lg */ 
+/* lg */
 @media (min-width: 1200px) {
-
+	.about-content h2 {
+		margin-top: 0
+	}
+	.about-content {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
 
 /* md */
@@ -135,18 +141,18 @@
 		font-size:16px;
 	}
 		/* Home */
-	.navbar-right li.active:before, 
-	.navbar-right li.active:after, 
+	.navbar-right li.active:before,
+	.navbar-right li.active:after,
 	.navbar-right li a.border:before {
 		display:none;
-	}	
+	}
 	#navigation .navbar-right li a {
 		font-size:14px;
 		padding:6px 13px;
-	}	
+	}
 	.carousel-caption {
 		left: 1%;
-		right: 1%;		
+		right: 1%;
 		font-size:16px;
 		bottom:68%;
 		text-align:center;
@@ -155,7 +161,7 @@
 		width:100%;
 	}
 	#main-carousel h2 {
-		font-size:48px;
+		font-size:41px;
 	}
 	.carousel-caption i {
 		font-size: 25px;
@@ -166,28 +172,28 @@
 		padding: 1px 0 0 6px;
 		width: 35px;
 	}
-	
-	/* Service */	
+
+	/* Service */
 	#services {
 		padding-bottom:0;
 	}
 	.service-heading {
 		text-align:center;
 		padding: 40px 0;
-	}	
+	}
 	.service-heading h3 {
 		font-size:33px;
-	}	
+	}
 	.service-content {
 		display: block;
 		font-size: 22px;
 		margin-left: 0;
 		margin-top: 0;
 		text-align: center;
-	}	
+	}
 	.service-icon {
 		display: inline-block;
-	}	
+	}
 	.single-service-text {
 		font-size:16px;
 	}
@@ -203,13 +209,13 @@
 		-o-transform: rotate(90deg);
 		-ms-transform: rotate(90deg);
 		transform: rotate(90deg);
-	}	
+	}
 	.single-service .col-sm-9 {
 		margin-top: 15px;
 		padding-left: 15px;
 		text-align:center;
 	}
-	
+
 	/* About us */
 	.about-details {
 		height:auto;
@@ -219,9 +225,9 @@
 	.about-image {
 		padding-right:15px;
 	}
-	.about-content h2, 
-	.our-team h2, 
-	.entry-header h2, 
+	.about-content h2,
+	.our-team h2,
+	.entry-header h2,
 	.recent-port-text h2  {
 		font-size: 35px;
 		text-align:center;
@@ -242,30 +248,30 @@
 	.single-member h3 {
 		margin-top:5px;
 	}
-	.single-member h3, 
+	.single-member h3,
 	.testimony-caption h3{
 		font-size:30px;
 	}
 	.team-member:hover .overlay {
 		bottom: 112px;
 	}
-	
+
 	/* testimonial */
 	.testimonial {
-		width: 90%;		
+		width: 90%;
 	}
 	.entry-header {
 	  padding-bottom: 60px;
 	  padding-top: 60px;
 	}
-	.entry-header, 
+	.entry-header,
 	.testimony-caption {
 		font-size:16px;
 	}
-	/* portfolio */	
+	/* portfolio */
 	#portfolio {
 		overflow:hidden;
-	}	
+	}
 	#portfolio-slider .item {
 		height:auto;
 		text-align:center;
@@ -280,7 +286,7 @@
 	#portfolio-slider .carousel-indicators {
 		bottom: -50px;
 		left: 50%;
-	}	
+	}
 	.mask a {
 		border: 5px solid #FFE401;
 		font-size: 24px;
@@ -291,7 +297,7 @@
 		width: 50px;
 	}
 	.recent-port-text {
-		padding: 40px 35px;
+		padding: 40px 15px;
 		text-align: justify;
 	}
 	.recent-port-text ul li i {
@@ -322,12 +328,12 @@
 	.client-left {
 		left: 43%;
 	}
-	
+
 	/* blog */
 	.single-blog {
 		height: 331px;
-	}	
-	.entry-content, 
+	}
+	.entry-content,
 	.blog-image {
 		width:50%;
 		height:100%;
@@ -342,14 +348,14 @@
 		padding: 10px 20px 0;
 		right: 0;
 	}
-	.entry-content a h2, 
+	.entry-content a h2,
 	.contact-section h2 {
 		font-size:24px;
 	}
 	.entry-content{
 		padding:21px;
 	}
-	
+
 	/* Footer */
 	#gmap {
 		height: 300px;
@@ -357,7 +363,7 @@
 	.contact-details {
 		margin-top:45px;
 	}
-	
+
 	/* Single Blog */
 	#blog-details {
 		margin-top: 110px;
@@ -366,25 +372,25 @@
 		font-size: 25px;
 		padding: 12px 15px;
 		float:left;
-	}	
+	}
 	.date span {
 		display:inline-block
-	}	
+	}
 	.date {
 		float: left;
 		margin-left: 20px;
 		margin-top: 7px;
-	}	
+	}
 	.blog-item .col-sm-2.text-center {
 		margin-bottom: 25px;
 		overflow: hidden;
-	}	
+	}
 	.blog-content .entry-meta span a {
 		font-size: 15px;
-	}	
-	.blog-content .entry-header h2, 
-	.replay-box h2, 
-	.author-details h2, 
+	}
+	.blog-content .entry-header h2,
+	.replay-box h2,
+	.author-details h2,
 	.comments-area h2 {
 		font-size:26px;
 		text-align:left;
@@ -402,7 +408,7 @@
 	.replay-box .btn-submit {
 		padding:5px 25px;
 	}
-	
+
 	/*single-folio*/
 	#single-folio .single-folio-slide {
 		margin-top:20px;
@@ -414,7 +420,7 @@
 	}
 	.single-folio-slide .item {
 		padding: 50px 30px;
-	}	
+	}
 	.portfolio-prev, .portfolio-next {
 		top:5px;
 	}
@@ -432,15 +438,15 @@
 
 /* XS Portrait */
 @media (max-width: 479px) {
-	
+
 	.carousel-caption {
 		bottom:55%;
 	}
-	
+
 	/* About Us */
 	.our-team .col-sm-4 {
 		width:100%;
-	}	
+	}
 	/* portfolio */
 	.portfolio-filter {
 		padding: 90px 0 80px;
@@ -452,9 +458,9 @@
 		max-height:640px;
 	}
 	/* Blog */
-	.entry-content, 
-	.blog-image, 
-	.blog-image img, 
+	.entry-content,
+	.blog-image,
+	.blog-image img,
 	.float-left {
 		width:100%;
 		height:auto;
@@ -462,7 +468,7 @@
 	.single-blog {
 		height:auto;
 	}
-	/* Footer */	
+	/* Footer */
 	.contact-details {
 		margin-top:50px;
 	}
@@ -470,7 +476,5 @@
 		font-size: 16px;
 		padding-bottom: 20px;
 		padding-top: 20px;
-	}	
-	
+	}
 }
-

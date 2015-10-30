@@ -354,10 +354,9 @@ textarea {
 }
 
 .about-content {
-	padding: 17px 50px 62px;
+	padding: 17px 15px 62px;
 	font-weight:300;
 	height:100%;
-	margin-left:-15px;
 }
 
 .about-content h2 {
