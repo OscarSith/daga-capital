@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1">
-			<div class="panel panel-warning">
+			<div class="panel panel-info">
 				<div class="panel-heading"><div class="panel-title">Editar Blogs</div></div>
 				<div class="panel-body">
 					@if (Session::has('success_message'))
