@@ -254,13 +254,13 @@
 							<div class="blog-image">
 								<a href="single-blog.html"><img class="img-responsive" src="images/blog/{{ $rec->thumb_picture }}" alt="" /></a>
 								<div class="post-date">
-									<p>28<span>April</span></p>
+									<p>{{ $rec->updated_at->format('d') }}<span>{{ $rec->updated_at->format('F') }}</span></p>
 								</div>
 							</div>
 							<div class="entry-content default-bg">
 								<a href="single-blog.html"><h2>{{ $rec->title }}</h2></a>
 								<p>{{ str_limit($rec->post, 160) }}</p>
-								<a href="blog" class="btn btn-primary">Read More</a>
+								<a href="{{ route('showBlog', [str_slug($rec->title, '-'), $rec->id]) }}" class="btn btn-primary">Read More</a>
 							</div>
 						</div>
 					</div>
@@ -346,7 +346,7 @@
 		</div>
 	</div>
 
-	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/canvas.js"></script>
 	<script type="text/javascript" src="js/jquery.isotope.min.js"></script>

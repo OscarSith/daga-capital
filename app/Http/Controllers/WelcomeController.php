@@ -2,7 +2,6 @@
 
 use App\Blog;
 use Mail;
-use Carbon;
 use Request;
 
 class WelcomeController extends Controller {
@@ -14,14 +13,15 @@ class WelcomeController extends Controller {
 	public function index()
 	{
 		$section = 'home';
-		$posts = Blog::all(['id', 'title', 'post', 'picture', 'created_at', 'thumb_picture']);
+		$posts = Blog::all(['id', 'title', 'post', 'picture', 'updated_at', 'thumb_picture']);
 		return view('welcome', compact('section', 'posts'));
 	}
 
-	public function blog()
+	public function blog($title, $id)
 	{
 		$section = 'blog';
-		return view('blog', compact('section'));
+		$blog = Blog::find($id);
+		return view('blog', compact('section', 'blog'));
 	}
 
 	public function send()

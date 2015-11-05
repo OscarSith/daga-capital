@@ -7,6 +7,8 @@
 	<title>Daga</title>
 
 	<link href="/css/app.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="/css/bootstrap3-wysihtml5.min.css" rel="stylesheet">
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -54,8 +56,23 @@
 
 	@yield('content')
 
-	<!-- Scripts -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/wysihtml5x-toolbar.min.js"></script>
+	<script src="js/handlebars.runtime.min.js"></script>
+	<script src="js/bootstrap3-wysihtml5.min.js"></script>
+	<script>
+		var options = {
+			toolbar: {
+				"fa": true,
+				"image": false
+			}
+		};
+		$('#textarea0').wysihtml5(options);
+		$('#textarea1').wysihtml5(options);
+		$('form').on('submit', function() {
+			$(this).find('button').last().prop('disabled', true).html('Cargando, espere por favor...');
+		});
+	</script>
 </body>
 </html>

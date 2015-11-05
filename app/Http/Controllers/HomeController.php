@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\Blog;
+use App\Http\Requests\EditBlogRequest;
 
 class HomeController extends Controller {
 
@@ -36,8 +37,22 @@ class HomeController extends Controller {
 		return view('admin', compact('posts'));
 	}
 
-	public function edit($id)
+	public function edit(EditBlogRequest $request, $id)
 	{
-		# code...
+		$blog = Blog::find($id);
+
+		$params = $request->all();
+
+		if ($request->hasFile('picture')) {
+			$params['picture'] = $request->file('picture')->getClientOriginalName();
+			\File::delete('images/blog/' . $params['old_picture_name']);
+			$request->file('picture')->move('images/blog', $params['picture']);
+		}
+
+		$blog->fill($params);
+		$blog->save();
+
+
+		return redirect()->back()->with('success_message', 'Datos actualizados');
 	}
 }
