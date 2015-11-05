@@ -259,7 +259,7 @@
 							</div>
 							<div class="entry-content default-bg">
 								<a href="single-blog.html"><h2>{{ $rec->title }}</h2></a>
-								<p>{{ str_limit($rec->post, 160) }}</p>
+								<p>{{ strip_tags(str_limit($rec->post, 180)) }}</p>
 								<a href="{{ route('showBlog', [str_slug($rec->title, '-'), $rec->id]) }}" class="btn btn-primary">Read More</a>
 							</div>
 						</div>
