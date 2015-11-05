@@ -39,7 +39,7 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="scroll {{ $section == 'home' ? 'active' : '' }}"><a href="#navigation">Home</a></li>
+                        <li class="scroll {{ $section == 'home' ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
                         <li class="scroll"><a class="border" href="{{ url('/')}}/#services">Services</a></li>
                         <li class="scroll"><a class="border" href="{{ url('/')}}/#about-us">About Us</a></li>
                         <li class="scroll"><a class="border" href="{{ url('/')}}/#portfolio">Portfolio</a></li>
