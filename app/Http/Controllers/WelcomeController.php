@@ -42,9 +42,10 @@ class WelcomeController extends Controller {
 		Mail::send('emails.contact', $params, function($message) use ($params)
 		{
 			$message->from($params['correo'], $params['nombre']);
+			$message->cc($params['correo'], $params['nombre']);
 			$message->to(env('MAIL_ADDRESS'), env('MAIL_NAME'))->subject($params['asunto']);
 		});
 
-		return response()->json(['load' => true, 'success_message' => 'Tu mensaje ha sido enviado']);
+		return response()->json(['load' => true, 'success_message' => 'Muchas gracias por entrar en contacto con nosotros, nos comunicaremos a la brevedad posible']);
 	}
 }

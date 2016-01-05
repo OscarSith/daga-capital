@@ -6,7 +6,7 @@
     </div>
 @stop
 @section('body')
-    <section id="main-carousel" class="carousel slide" data-ride="carousel">
+    <section id="main-carousel" class="carousel slide" data-ride="carousel" data-interval="9000">
 		<ol class="carousel-indicators">
 			<li data-target="#main-carousel" data-slide-to="0" class="active"></li>
 			<li data-target="#main-carousel" data-slide-to="1"></li>
@@ -165,7 +165,7 @@
 					<p>Conscientes de que conocemos distintos mercados y sectores económicos, nuestro portafolio busca enriquecerse de proyectos variados que puedan evidenciar nuestro expertise.</p>
 				</div>
 			</div>
-			<div id="portfolio-slider" class="carousel slide carousel-fade" data-ride="carousel">
+			<div id="portfolio-slider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="13000">
 				<div class=" carousel-inner wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
 					<div class="item active row">
 						<div class="col-sm-6">
@@ -258,9 +258,10 @@
 								</div>
 							</div>
 							<div class="entry-content default-bg">
-								<a href="single-blog.html"><h2>{{ $rec->title }}</h2></a>
+								<?php $url = route('showBlog', [str_slug($rec->title, '-'), $rec->id]) ?>
+								<a href="{{ $url }}"><h2>{{ $rec->title }}</h2></a>
 								<p>{{ strip_tags(str_limit($rec->post, 180)) }}</p>
-								<a href="{{ route('showBlog', [str_slug($rec->title, '-'), $rec->id]) }}" class="btn btn-primary">Read More</a>
+								<a href="{{ $url }}" class="btn btn-primary">Read More</a>
 							</div>
 						</div>
 					</div>
@@ -303,7 +304,7 @@
 						</div>
 					</div>
 					<div class="col-sm-12 col-md-3 contact-details wow fadeInUp" data-wow-duration="1600ms" data-wow-delay="500ms">
-						<h2>CONTACTENOS</h2>
+						<h2>CONTÁCTENOS</h2>
 						<h3>En Perú:</h3>
 						<ul>
 							<li><i class="fa fa-phone"></i> <span>Número Telefónico<br>(511) 242 2534</span></li>
@@ -315,7 +316,7 @@
 						<h2>&nbsp;</h2>
 						<h3>En Colombia:</h3>
 						<ul>
-							<li><i class="fa fa-phone"></i> <span>Número Telefónico<br>(0057) 2 379 7150</span></li>
+							<li><i class="fa fa-phone"></i> <span>Número Telefónico<br>(0057) 316 456 4987</span></li>
 							<li><i class="fa fa-map-marker"></i> <span>Dirección:<br>Av. 2HN N° 54-05 A 103 Santiago de Cali.</span></li>
 							<li><i class="fa fa-envelope"></i> <span>E-Mail:<br>contacto@dagacapital.com</span></li>
 						</ul>

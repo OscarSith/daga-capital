@@ -271,6 +271,7 @@
 	/* portfolio */
 	#portfolio {
 		overflow:hidden;
+		height: 1052px;
 	}
 	#portfolio-slider .item {
 		height:auto;
